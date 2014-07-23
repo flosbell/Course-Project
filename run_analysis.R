@@ -1,20 +1,24 @@
+#Dowload and unzip data
+fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileURL,destfile="data.zip")
+unzip("data.zip")
 #Load the variable labels
-labels <- readLines("features.txt")
+labels <- readLines("./UCI HAR Dataset/features.txt")
 labels <- c("Subject","Activity","Dataset",labels)
-activities <- scan("activity_labels.txt",what="character")
+activities <- scan("./UCI HAR Dataset/activity_labels.txt",what="character")
 activities <- activities[seq(from=2,to=12,by=2)]
 #Load the train data
-train_data <- read.table("train/X_train.txt", header=F,sep="")
-train_subject <- readLines("train/subject_train.txt")
-train_labels <- readLines("train/y_train.txt")
+train_data <- read.table("./UCI HAR Dataset/train/X_train.txt", header=F,sep="")
+train_subject <- readLines("./UCI HAR Dataset/train/subject_train.txt")
+train_labels <- readLines("./UCI HAR Dataset/train/y_train.txt")
 #Substitute numbers with descriptive activity names
 for (i in 1:6){
   train_labels[train_labels==i] <- rep(activities[i],length(train_labels[train_labels==i]))
 }
 #Load the test data
-test_data <- read.table("test/X_test.txt", header=F,sep="")
-test_subject <- readLines("test/subject_test.txt")
-test_labels <- readLines("test/y_test.txt")
+test_data <- read.table("./UCI HAR Dataset/test/X_test.txt", header=F,sep="")
+test_subject <- readLines("./UCI HAR Dataset/test/subject_test.txt")
+test_labels <- readLines("./UCI HAR Dataset/test/y_test.txt")
 #Substitute numbers with descriptive activity names
 for (i in 1:6){
   test_labels[test_labels==i] <- rep(activities[i],length(test_labels[test_labels==i]))
