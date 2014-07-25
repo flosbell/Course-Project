@@ -15,21 +15,18 @@ For both datasets, the information about subject, activity and features was merg
 
 Variable Labels available in file 'features.txt' were loaded into the dataset as variable names for features. The variable describing activity was recoded to contain text descriptions instead of numbers.
 
-All feature variables that did not contain information about mean or standard deviation were removed (their names did not contain substrings 'mean()' or 'std()'). Then mean of all
+All feature variables that did not contain information about mean or standard deviation were removed (their names did not contain substrings 'mean()' or 'std()').
 
-For all subjects and activities was computed mean of all remaining feature variables. New "Tidy dataset" was created - it contains one row of data for each pariticipant and each activity along with the information on mean for all remaining feature variables.
+For all subjects and activities was computed average of all remaining feature variables. New "Tidy dataset" was created - it contains one row of data for each pariticipant and each activity along with the information on average for all remaining feature variables.
 
 
 Descriptions of variables - Tidy dataset
 ---------------------------
-The dataset contains 69 variables - 3 describing the observation and 66 describing means of the features. Please refer to the original dataset [1] for more detailed description of feature variables.
+The dataset contains 69 variables - 3 describing the subject activity and dataset and 66 describing the average of each feature variable for each activity and each subject. Please refer to the original dataset [1] for more detailed description of feature variables.
 
- Observation details:
  * Subject - numbers 1 to 30
  * Activity - 6 different activities
  * Dataset - denotes from which datasets comes the observation
- 
- Feature variables:
  * tBodyAcc-mean()-X
  * tBodyAcc-mean()-Y
  * tBodyAcc-mean()-Z
