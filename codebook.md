@@ -17,7 +17,7 @@ Variable Labels available in file 'features.txt' were loaded into the dataset as
 
 All feature variables that did not contain information about mean or standard deviation were removed (their names did not contain substrings 'mean()' or 'std()').
 
-For all subjects and activities was computed average of all remaining feature variables. New "Tidy dataset" was created - it contains one row of data for each pariticipant and each activity along with the information on average for all remaining feature variables.
+For all subjects and activities was computed average of all remaining feature variables. New "Tidy dataset" was created - it contains one row of data for each pariticipant and each activity along with the information on average for all remaining feature variables. Variable names of features were modified - the "-" was replaced by "_" and "_avg" was added to the end to signify that they are averages.
 
 
 Descriptions of variables - Tidy dataset
