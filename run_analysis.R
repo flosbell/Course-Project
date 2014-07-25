@@ -16,6 +16,9 @@ if (is.na(filesum) || filesum != "d29710c9530a31f303801b6bc34bd895") {
 message("Loading variable labels")
 labels <- scan("./UCI HAR Dataset/features.txt",what="character",quiet=T)
 labels <- labels[seq(from=2,to=length(labels),by=2)]
+avrg <- rep("_avg",length(labels))
+labels <- paste(labels,avrg,sep="")
+labels <- gsub("-","_",labels)
 labels <- c("Subject","Activity","Dataset",labels)
 activities <- scan("./UCI HAR Dataset/activity_labels.txt",what="character",quiet=T)
 activities <- activities[seq(from=2,to=12,by=2)]
@@ -87,6 +90,7 @@ rm(test_labels)
 rm(train_lab)
 rm(test_lab)
 rm(filesum)
+rm(avrg)
 message("DONE!")
 #Load the tidy data into the workspace
 #tidy_data <- read.table("tidy.txt", header=T,sep="\t")
