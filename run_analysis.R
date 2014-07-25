@@ -9,8 +9,8 @@ if (is.na(filesum) || filesum != "d29710c9530a31f303801b6bc34bd895") {
   message("Downloading data")
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL,destfile="data.zip")
-  unzip("data.zip")
 } else {message("data.zip found in the working directory")}
+unzip("data.zip")
 
 #Load the variable labels
 message("Loading variable labels")
