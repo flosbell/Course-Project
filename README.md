@@ -31,3 +31,9 @@ HOW TO USE run_analysis.R
  5. Wait while the script works (can take up to several minutes, depending on your inetrnet connection and PC)
  5. After the script finishes, file 'tidy.txt' should be in your working directory. You can load it
     into R using the 'read.table("tidy.txt")' command.
+    
+Notes
+-----------------------------
+ * Works correctly in Windows enviroment
+ * Not tested on Mac and various Linux distributions
+    
