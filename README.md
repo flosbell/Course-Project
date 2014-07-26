@@ -35,5 +35,5 @@ HOW TO USE run_analysis.R
 Notes
 -----------------------------
  * Works correctly in Windows enviroment
- * Not tested on Mac and various Linux distributions
+ * Not tested on Mac and various Linux distributions, if the automatic download does not work please try the step marked as 'Optional'
     
